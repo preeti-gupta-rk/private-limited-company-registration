@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.why-choose-us-container{
+    font-family: "Poppins",sans-serif;
+    margin: 10px 0;
+    .why-heading{
+        text-align: left;
+        font-weight: 700;
+        color:#000;
+        span{
+            color: #ffa229;
+        }
+    }
+    .why-description{
+        text-align: left;
+    }
+    .why-container{
+        display:flex;
+        flex-direction: column;
+        .why-choose-us-left{
+            padding:1rem;
+            display:flex;
+            flex-direction: column;
+            width:100%;
+            ul {
+                list-style: none; /* Removes the default bullet points */
+                padding: 0;       /* Optional: Removes default padding */
+                 li::before {
+                    content: "✔ ";   /* Inserts the tick icon before each list item */
+                    color: green;     /* Optional: Change the tick color */
+                    margin-right: 8px;/* Optional: Adds space between the tick and the list text */
+                  }
+              }
+        }
+
+        .why-choose-us-right{
+            flex:1;
+        }
+    }
+    @media(max-width:480px){
+        padding:2rem 2rem;
+        .why-container{
+            flex-direction: column;
+            .why-choose-us-left{
+                width:100%;
+            }
+        }
+    }
+}

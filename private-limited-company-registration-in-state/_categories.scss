@@ -1,0 +1,89 @@
+.category-section {
+
+  
+    .category-main-container {
+      /* Center and limit max width for large screens */
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+  
+      /* Main heading */
+      .category-h1 {
+        text-align: left;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+  
+        .category-span {
+          color: $color-primary; 
+        }
+      }
+  
+      
+      .category-p {
+        font-size: 1rem;
+        line-height: 1.5;
+        max-width: 800px;
+        margin: 0 auto 2rem; 
+        text-align: justify;
+      }
+  
+      /* Grid container for cards */
+      .category-card-grid-container {
+        display: grid;
+        gap: 1.5rem; // spacing between cards
+  
+        /* Default to 3 columns for laptop (≥ 1024px) */
+        grid-template-columns: repeat(3, 1fr);
+  
+        /* Tablet (≥ 768px and < 1024px) => 2 columns */
+        @media screen and (max-width: 1024px) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        @media screen and (max-width: 768px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+  
+
+        @media screen and (max-width: 480px) {
+          grid-template-columns: 1fr;
+        }
+      }
+  
+      /* Individual card styling */
+      .category-card {
+        background-color: #fff;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        padding: 1rem;
+        text-align: left;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  
+        /* Card title (h2) */
+        h2 {
+          font-size: 1.25rem;
+          margin-bottom: 0.5rem;
+          font-weight: 600;
+        }
+  
+        /* Separator under title */
+        .category-separator {
+          display: block;
+          width: 40px;
+          height: 3px;
+          background-color: orange;
+          margin: 0.5rem 0;
+        }
+  
+        /* Paragraph within card */
+        .category-p {
+          margin-top: 0.5rem;
+          font-size: 0.95rem;
+          line-height: 1.4;
+        }
+      }
+    }
+}
+#categories{
+  scroll-margin-top: 130px;
+}

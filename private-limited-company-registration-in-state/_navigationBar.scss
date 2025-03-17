@@ -1,0 +1,66 @@
+.toc-container {
+  position: sticky;
+  top: 4rem;
+  z-index: 999;
+}
+
+.toc-swiper-wrapper {
+  background-color: white;
+  position: relative;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  max-width: 100%;
+}
+
+/* Navigation icon styling */
+.nav-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.nav-icon:hover {
+  color: #000;
+}
+
+.prev-button {
+  left:0;
+}
+
+.next-button {
+  right:0;
+}
+
+/* Card styling */
+.toc-card {
+  background-color: orange;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  text-align: center;
+  border: 1px solid rgb(161, 227, 246);
+  font-size: 0.8rem;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  .toc-card-item {
+  color: $color-secondary;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0;
+    }
+}
+
+.toc-card.active {
+  background-color: darkorange; /* Change color for active slide */
+}
+
+
+
+  

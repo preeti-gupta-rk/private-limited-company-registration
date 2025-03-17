@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.content-section {
+  font-family: "Poppins", sans-serif;
+
+  .content-container-div {
+    display: flex;
+    gap: 2rem;
+    padding-left:4rem;
+
+    .movable-div {
+      width: 67%;
+      .main-1 {
+        padding: 2rem 0rem;
+        
+        p{
+          text-align: justify;
+        }
+        .heading {
+          font-size: 30px;
+          font-weight: 700;
+          color: #000;
+         
+          span{
+            color: #ffa229;
+          }
+        }
+      }
+      #what-is-private-limited-company{
+        scroll-margin-top: 110px;
+      }
+    }
+
+    .sticky-div {
+      width: 23%;
+      flex: 1;
+      position: sticky;
+      top: 2rem;
+      align-self: flex-start;
+    }
+  }
+  @media(max-width:480px){
+    .content-container-div{
+     .main-1{
+      .heading{
+        text-align: center;
+      }
+     }
+     
+    }
+  }
+  
+  @media(max-width:768px){
+    
+    .content-container-div{
+      padding:0rem 2rem;
+      .movable-div{
+        width:100%;
+      }
+      .sticky-div{
+        display:none;
+      }
+
+    }
+   
+  }
+  @media(min-width:1023px){
+    .content-container-div{
+      .content-form-container{
+        display:none;
+      }
+    }
+  }
+}

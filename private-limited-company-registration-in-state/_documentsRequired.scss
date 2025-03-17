@@ -1,0 +1,76 @@
+.documents-container{
+    padding: 2rem 0rem;
+    .heading-documents{
+        font-weight: 700;
+        color: #000;
+        span{
+            color: #ffa229;;
+        }
+    }
+    .documents-card-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:1rem;
+        flex-wrap: wrap;
+        .documents-card{
+            border:2px dashed #c7c7c7;
+            padding:0.5rem;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+            width:15rem;
+            height:10.5rem;
+            border-radius: 0.5rem;
+            .document-card-heading{
+                text-align: left;
+                font-weight: 700;
+                
+            }
+
+            .document-card-list{
+                list-style: none;
+                font-size: 0.8rem;
+                padding-left: 0 !important;
+
+                .document-card-description::before{
+                    content: "✔  ";
+                    list-style: none;
+                }
+            }    
+        }
+    }
+   
+    @media(max-width:768px){
+        .documents-card-container{
+            gap:0.7rem;
+            .documents-card{
+                width:13rem;
+                height:10rem;
+                padding:0.5rem;
+                box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+                .document-card-heading{
+
+
+                  font-size: 0.8rem;
+                    font-weight:600;
+                }
+                .document-card-description{
+                   
+                    font-size: 0.7rem;
+                }
+
+            }
+        }
+    }
+
+    @media(max-width: 480px){
+        .documents-card-container{
+            .documents-card{
+                width: 100%;
+                height: fit-content;
+            }
+        }
+    }
+}
+#documents-required-for-registration{
+    scroll-margin-top: 110px;
+}
