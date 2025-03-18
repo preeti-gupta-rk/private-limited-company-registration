@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.main-form-container {
+  display: flex;
+  justify-content: center;
+  margin: 8rem auto;
+  padding-top: 5rem;
+  position: relative;
+  overflow: visible;
+}
+.new-form-design {
+  /* Replace fixed width/height with fluid widths or max-widths */
+  width: 100%;
+  max-width: 20rem; /* 20rem = 320px */
+  /* Remove fixed height so it can grow based on content */
+  min-height: 22.5rem;
+  background-color: rgb(231, 236, 243);
+  border: 2px dashed #C7C7C7;
+  border-radius: 0rem 2rem 0rem 2rem;
+  position: relative;
+  overflow: visible;
+  font-family: "Open Sans", sans-serif;
+  .form-created {
+    /* If you want a "pop-out" look on larger screens, keep it absolute. */
+    position: absolute;
+    top: -18%;
+    right: 10%;
+    width: 20rem;
+    background-color: #fff;
+    border-radius: 0rem 2rem 0rem 2rem;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+    padding: 0.7rem 0rem;
+    font-family: "Poppins",serif;
+    .rounded-div {
+      width: fit-content;
+      padding: 0.5rem 1.3rem;
+      background-color: #1E446C;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border-radius: 0rem 1.5rem 1.5rem 0rem;
+    }
+    .form-container {
+      padding: 1rem 1.5rem;
+      font-size: 0.8rem;
+      .form-description-text {
+        color: #1E446C;
+        margin-bottom: 1rem;
+        .span-text {
+          color: #FCA229;
+          text-decoration: underline;
+        }
+      }
+      .input-wrapper {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #C7C7C7;
+        padding: 0.3rem;
+        margin-bottom: 0.5rem;
+        .input-container {
+          flex: 1;
+          .input-element {
+            width: 100%;
+            border: none;
+            outline: none;
+          }
+        }
+      }
+      .form-button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .orange-button {
+          margin-top: 1rem;
+          padding: 0.3rem 0.7rem;
+          background-color: #FCA229;
+          color: white;
+          font-size: 0.8rem;
+          font-weight: 600;
+          border: none;
+          border-radius: 0.5rem;
+          transition: all 0.3s ease-in-out;
+          cursor: pointer;
+          &:hover {
+            background-color: #1E446C;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .new-form-design .form-created {
+    top: -15%;
+    right: 5%;
+    width: 100%;
+    max-width: 20rem; /* Ensure it doesn’t stretch too wide on tablets */
+  }
+}
+/* Mobile and below */
+@media (max-width: 480px) {
+  .main-form-container{
+    margin:1rem 0.5rem;
+    padding:0;
+    width: 100%;;
+  }
+  .new-form-design .form-created {
+    top: -15%;
+    right: 5%;
+    width: 100%;
+    .rounded-div {
+      font-size: 1rem;
+    }
+    .form-container {
+      font-size: 0.75rem;
+      padding: 1.2rem;
+      .form-button-container .orange-button {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
+  }
+}
