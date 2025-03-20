@@ -39,7 +39,7 @@ export default function DocumentsRequired(props: DocumentsRequiredProps) {
   ];
   return (
     <div className="documents-container" id="documents-required-for-registration">
-      <h2 className="heading-documents"><span>Documents Required</span> for Private Limited Company Registration in Maharashtra.</h2>
+      <h2 className="heading-documents"><span>Documents Required</span> for Private Limited Company Registration in Maharashtra</h2>
       <p>
        {para}
       </p>
