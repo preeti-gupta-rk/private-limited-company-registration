@@ -31,9 +31,9 @@ const CountUp = ({ target, duration = 5, format = (val: any) => val }: any) => {
 const Banner: React.FC<BannerProps> = ({ state }) => {
 
   const [formOpen, setFormOpen] = useState<any>(null);
-  // useEffect(() => {
-  //   setFormOpen(true);  // This will trigger the modal to open when the page reloads
-  // }, []);
+  useEffect(() => {
+    setFormOpen(true);  // This will trigger the modal to open when the page reloads
+  }, []);
   return (
     <div className="private-limited-company-registration-in-state-banner">
 
@@ -41,7 +41,7 @@ const Banner: React.FC<BannerProps> = ({ state }) => {
         <div className="private-banner-left">
           <div className="breadcrumb">
             <p>
-              <strong>Home/ Private Limited Company Registration /</strong> Private Limited Company
+              <strong>Home/ Private Limited Company Registration / </strong> Private Limited Company
               Registration in {state ? state : "India"}
             </p>
           </div>
@@ -53,15 +53,11 @@ const Banner: React.FC<BannerProps> = ({ state }) => {
           </div>
           <div className="private-description">
             <p>
-              Private Limited Company Registration is an official permit to
-              legally establish a private company in {state ? state : "India"}.
-              However, {state ? state : "India"} has unique stance on private
-              limited company registration under the Company Registration
-              Act, 2000.
-            </p>
+            Launch Your Private Limited Company in {state ? state : "India"}—Fast, Affordable & Hassle-Free!</p>
+            <p>Don’t let legal complexities hold you back - <b>100% Online Process.</b></p>
           </div>
           <span className="private-button-div" onClick={() => setFormOpen(true)}>
-            <button className="button">Get Your Company Registered</button>
+            <button className="button">Register Now</button>
           </span>
           <div className="private-ratings-div">
             <div className="rating">
