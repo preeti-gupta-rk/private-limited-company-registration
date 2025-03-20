@@ -27,9 +27,8 @@ export default function Content(props: ContentProps) {
                             {para1}
                         </p>
 
-                        <p>
-                            {para2}
-                        </p>
+                        <p dangerouslySetInnerHTML={{__html:para2}}/>
+                            
 
                         <p>
                             {para3}
@@ -38,15 +37,15 @@ export default function Content(props: ContentProps) {
                     </div>
                     
                     <EligibilityCriteria state={props.state} eligibilityContent={eligibilityCriteria} />
-                    <Benefits benefitsContent={benefits} />
-                    <Categories categoriesContent={categories} />
+                    <Benefits benefitsContent={benefits} state={props.state} />
+                    <Categories state={props.state} categoriesContent={categories} />
                     <DocumentsRequired documentsContents={documents_required} />
-                    <Steps stepsContent={stepsToRegister} />
+                    <Steps state={props.state} stepsContent={stepsToRegister} />
                     {/* Cost & Penalities */}
-                    <CostPenalities penaltiesContent={cost_penalties} />
+                    <CostPenalities state={props.state} penaltiesContent={cost_penalties} />
                     <WhyChooseUs state={props.state} whyChooseRegisterKaroContent={whyChooseRegisterKaro} />
                     <CompanyRegistrationAuthorization state={props.state} authorizationContent={companyRegistrationAuthorization} />
-                    <ChallengeSolutions challengesContent={challenges_solutions} />
+                    <ChallengeSolutions state={props.state} challengesContent={challenges_solutions} />
                 </div>
                 <div className="sticky-div">
                     <NewFormDesign></NewFormDesign>
