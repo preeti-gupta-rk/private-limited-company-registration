@@ -7,14 +7,24 @@ import "swiper/css/navigation";
 import Image from "next/image";
 
 interface StepsToRegisterProps{
+  state:string,
   stepsContent:{
     para:string;
+    para1:string;
+    para2:string;
+    para3:string;
+    para4:string;
+    para5:string;
+    para6:string;
+    para7:string;
+    para8:string;
     steps:string[];
   }
 }
 
 export default function Steps(props:StepsToRegisterProps) {
-  const {para, steps} = props.stepsContent;
+  const {para,para1,para2,para3,para4,para5,para6,para7,para8, steps} = props.stepsContent;
+  const {state} = props;
   const Steps = [
     "Obtain Digital Signature Certificates (DSC)",
     "Apply for Director Identification Number",
@@ -29,7 +39,7 @@ export default function Steps(props:StepsToRegisterProps) {
   return (
     <div className="steps-container-div" id="step-by-step-procedure">
       <h2 className="heading-steps">
-        <span>Step by Step Procedure</span> to Register a Private Limited Company
+        <span>Step by Step Procedure</span> to Register a Private Limited Company in {state}
       </h2>
       <p>
         {para}
@@ -91,6 +101,14 @@ export default function Steps(props:StepsToRegisterProps) {
           ))}
         </Swiper>
       </div>
+      <p dangerouslySetInnerHTML={{__html:para1}} />
+      <p dangerouslySetInnerHTML={{__html:para2}} />
+      <p dangerouslySetInnerHTML={{__html:para3}} />
+      <p dangerouslySetInnerHTML={{__html:para4}} />
+      <p dangerouslySetInnerHTML={{__html:para5}} />
+      <p dangerouslySetInnerHTML={{__html:para6}} />
+      <p dangerouslySetInnerHTML={{__html:para7}} />
+      <p dangerouslySetInnerHTML={{__html:para8}} />
     </div>
   );
 }
