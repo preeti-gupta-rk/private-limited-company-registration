@@ -7,17 +7,22 @@ interface BenefitItem {
 }
 
 interface BenefitsProps {
+  state:string,
   benefitsContent: {
     para1: string;
     para2: string;
     para3: string;
     para4: string;
+    para5: string;
+    para6: string;
+    para7: string;
     benefitsArrayData: BenefitItem[];
   }
 }
 
 export default function Benefits(props: BenefitsProps) {
-  const {para1, para2, para3, para4, benefitsArrayData} = props.benefitsContent;
+  const {para1, para2, para3, para4, para5, para6, para7, benefitsArrayData} = props.benefitsContent;
+  const {state} = props;
   const benefits = [
     {
       heading: "Skilled Workforce",
@@ -59,7 +64,7 @@ export default function Benefits(props: BenefitsProps) {
   }, [router.asPath]);
   return (
     <div className="private-limited-benefits-container" id="benefits-of-private-company-registration">
-      <h2 className="heading-benefits"><span>Benefits</span> of Private Limited Company Registration </h2>
+      <h2 className="heading-benefits"><span>Benefits</span> of Private Limited Company Registration in {state}</h2>
       <p>
         {para1}
       </p>
@@ -73,11 +78,14 @@ export default function Benefits(props: BenefitsProps) {
           );
         })}
       </div>
-      <p className="benefits-para">
-        {para2}
-      </p>
-      <p className="benefits-para">{para3}</p>
-      <p className="benefits-para">{para4}</p>
+      <p className="benefits-para" dangerouslySetInnerHTML={{__html:para2}} />
+        
+      <p className="benefits-para" dangerouslySetInnerHTML={{__html: para3}} />
+      <p className="benefits-para" dangerouslySetInnerHTML={{__html: para4}} />
+      <p className="benefits-para" dangerouslySetInnerHTML={{__html: para5}} />
+      <p className="benefits-para" dangerouslySetInnerHTML={{__html: para6}} />
+      <p className="benefits-para" dangerouslySetInnerHTML={{__html:para7}} />
+
     </div>
   );
 }
