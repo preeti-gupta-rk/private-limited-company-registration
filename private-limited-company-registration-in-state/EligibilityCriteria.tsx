@@ -57,37 +57,3 @@ export default function EligibilityCriteria({state,eligibilityContent}: Eligibil
     </div>
   );
 }
-
-
-// extra code
-
-{/* <div className="criteria-card">
-          <div className="image-container">
-            <UsersThree size={36} />
-          </div>
-          <p className="text">Minimum 2 Shareholders & 2 Directors</p>
-        </div>
-        <div className="criteria-card">
-          <div className="image-container">
-            <File size={36} />
-          </div>
-          <p className="text">Registered Office Address</p>
-        </div>
-        <div className="criteria-card">
-          <div className="image-container">
-            <Pen size={36} />
-          </div>
-          <p className="text">DSC & DIN</p>
-        </div>
-        <div className="criteria-card">
-          <div className="image-container">
-            <HouseLine size={36} />
-          </div>
-          <p className="text">Legal Documents</p>
-        </div>
-        <div className="criteria-card">
-          <div className="image-container">
-            <SuitcaseSimple size={36} />
-          </div>
-          <p className="text">Indian Resident Director</p>
-        </div> */}
