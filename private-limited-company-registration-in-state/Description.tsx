@@ -10,7 +10,7 @@ declare global {
 }
 export interface DescriptionProps {
   state?: string;
-  content: { para1: string; para2: string } ;
+  content: { para1: string; para2: string; para3: string } ;
 }
 const Description: React.FC<DescriptionProps> = ({ state, content }: DescriptionProps) => {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
@@ -60,12 +60,15 @@ const Description: React.FC<DescriptionProps> = ({ state, content }: Description
     <div className="description-component">
       <div className="description-container">
         <div className="description-left">
-          <h2 className="description-heading">Private Company Registration in {state ? state : "India"}</h2>
+          <h2 className="description-heading">Watch How We Register Companies in Record Time! </h2>
           <p>
             {content?.para1}
           </p>
           <p>
            {content?.para2}
+          </p>
+          <p>
+           {content?.para3}
           </p>
           <div className="description-button-container">
             <Link href="/contact-us" className="">
