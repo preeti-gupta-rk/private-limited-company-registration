@@ -68,13 +68,13 @@ const TestimonialsDataArray = [
   },
 ];
 
-const StarRating = ({ rating }) => {
+const StarRating = ({ rating }: any) => {
   const totalStars = 5; // We are using a 5-star rating system
   const fullStars = Math.floor(rating); // Full stars based on the integer part of the rating
   const hasHalfStar = rating % 1 >= 0.5; // If the decimal part is >= 0.5, we need a half star
   const emptyStars = totalStars - Math.ceil(rating); // Empty stars based on the total stars minus the full and half stars
 
-  const renderStar = (index) => {
+  const renderStar = (index: number) => {
     if (index < fullStars) {
       return (
         <StarComponent key={`full-${index}`} filled={true} />
@@ -97,7 +97,7 @@ const StarRating = ({ rating }) => {
   );
 };
 
-const StarComponent = ({ filled }) => {
+const StarComponent = ({ filled }: any) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
       {filled === true ? (
@@ -197,13 +197,24 @@ const Testimonial: React.FC<TestimonialProps> = ({ isBg }) => {
     width: "8000",
   };
 
+  const marker = "Don't";
+  const markerIndex = description.indexOf(marker);
+
+
+  const firstPart = markerIndex !== -1 ? description.substring(0, markerIndex) : description;
+  const secondPart = markerIndex !== -1 ? description.substring(markerIndex) : "";
+
+
   return (
     <section style={bgImage} className="testimonial-section">
       <div className="main-testimonial-plcr">
         <div className="section-testimonial-title-left">
           <p className="titleFirm">RegisterKaro</p>
           <h2 className="titleClient">What Our Clients Say</h2>
-          <p className="titleDescription">{description}</p>
+          <p className="titleDescription">
+            {firstPart}
+            {secondPart && (<><br /><br/>{secondPart}</>)}
+          </p>
           <div className="title-arrow-left">
             <span onClick={() => handleMove("left")}>
               <ArrowLeft />
